@@ -46,7 +46,7 @@
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClicked" text="DELETE" GridPane.columnIndex="2" />
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClicked" text="CLEAR" GridPane.columnIndex="1" />
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClicked" text="HIST" />
-                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onSignClick" onKeyPressed="#onKeyPressed" styleClass="operator-button" stylesheets="@../styles/calculator-stylesheet.css" text="+/-" GridPane.rowIndex="4" />
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClicked" styleClass="operator-button" stylesheets="@../styles/calculator-stylesheet.css" text="+/-" GridPane.rowIndex="4" />
             </children>
         </GridPane>
     </center>

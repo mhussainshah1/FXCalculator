@@ -1,7 +1,6 @@
 package com.company.controller;
 
 import com.company.Main;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +15,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Muhammad Shah
+ * @version Java 16
+ */
 public class SimpleController {
     boolean clear = true, decimal, equal;
     String operator = "+";
@@ -29,6 +32,7 @@ public class SimpleController {
 
     private List<String> calculationHistory = new ArrayList<>();
 
+    //handlers
     public void onMouseClicked(MouseEvent event) {
         var button = (Button) event.getSource();
         String buttonText = button.getText();
@@ -37,9 +41,9 @@ public class SimpleController {
             case "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" -> insertNumber(buttonText);
             case "." -> insertDecimal(buttonText);
             case "+", "-", "/", "x" -> insertOperator(buttonText);
+            case "+/-" -> inverseSign();
             case "CLEAR" -> clearExpression();
             case "=" -> showResult();
-//            case "ANS" -> insertAnswer(getResult().getText().substring(2));
             case "DELETE" -> deleteLast();
             case "HIST" -> openHistoryWindow();
         }
@@ -68,10 +72,16 @@ public class SimpleController {
             case MULTIPLY -> insertOperator("x");
             case DIVIDE -> insertOperator("/");
 
+            case F9 -> inverseSign();
             case DELETE -> clearExpression();
             case ENTER -> showResult();
         }
         System.out.println("name = " + code.getName() + ", code = " + code.getCode() + ", char = " + code.getChar());
+    }
+
+    public void inverseSign() {
+        double d = -1 *  Double.parseDouble(lblResult.getText());
+        lblResult.setText(getOutput(d));
     }
 
     public void insertNumber(String number) {
@@ -151,7 +161,7 @@ public class SimpleController {
             if (lastIndex != 0) {
                 text.deleteCharAt(lastIndex);
             } else {
-                text.replace(0,1,"0");
+                text.replace(0, 1, "0");
             }
             lblResult.setText(text.toString());
         }
@@ -182,10 +192,6 @@ public class SimpleController {
         }
     }
 
-    public void onSignClick(ActionEvent ae) {
-        double d = -1 * result;
-        lblResult.setText(getOutput(d));
-    }
 
     public void insertDecimal(String buttonText) {
         if (!decimal) {
