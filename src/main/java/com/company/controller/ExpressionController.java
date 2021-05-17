@@ -89,7 +89,7 @@ public class ExpressionController {
 
     private void openHistoryWindow() {
         try {
-            var loader = new FXMLLoader(getClass().getResource("/com/company/resources/history.fxml"));
+            var loader = new FXMLLoader(getClass().getResource("/main/resources/fxml/history.fxml"));
             Parent root = loader.load();
             Main.getHistoryStage().setScene(new Scene(root));
 
