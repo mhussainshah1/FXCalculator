@@ -45,20 +45,21 @@
       </GridPane>
    </center>
    <top>
-      <TitledPane collapsible="false" text="Best Calculator In the World" BorderPane.alignment="CENTER">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <Label fx:id="expression" alignment="CENTER" layoutX="20.0" layoutY="71.0" prefHeight="18.0" prefWidth="303.0">
-                     <font>
-                        <Font name="Verdana" size="22.0" />
-                     </font></Label>
-                  <Label fx:id="result" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="128.0" prefHeight="28.0" prefWidth="277.0">
-                     <font>
-                        <Font name="Segoe UI Light" size="19.0" />
-                     </font></Label>
-               </children></AnchorPane>
-        </content>
-      </TitledPane>
+       <TitledPane collapsible="false" text="Best Calculator In the World" BorderPane.alignment="CENTER">
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <Label fx:id="expression" alignment="CENTER" layoutX="20.0" layoutY="71.0" prefHeight="18.0"
+                      prefWidth="303.0">
+                   <font>
+                       <Font name="Verdana" size="22.0"/>
+                   </font>
+               </Label>
+               <Label fx:id="result" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="128.0" prefHeight="28.0"
+                      prefWidth="277.0">
+                   <font>
+                       <Font name="Segoe UI Light" size="19.0"/>
+                   </font>
+               </Label>
+           </AnchorPane>
+       </TitledPane>
    </top>
 </BorderPane>
